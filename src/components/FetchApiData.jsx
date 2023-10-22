@@ -7,15 +7,14 @@ export default function FetchApiData() {
   // const { loading: ipLoading, error: ipError, apiData: ipApiData, moduleCalled: ipModuleCalled } = useMockData();
 
   const ipBaseUrl = import.meta.env.VITE_APP_IPBASEURL; //useAsyncAwait
-  const ipRequestEndpoint = "/json/"; 
+  const ipRequestEndpoint = "/json/"; // true location
+  // const ipRequestEndpoint = "/181.214.89.125/json/"; // mock location
   const ipUrl = `${ipBaseUrl}${ipRequestEndpoint}`;
   const { loading: ipLoading, error: ipError, apiData: ipApiData, moduleCalled: ipModuleCalled } = useAsyncAwait(ipUrl);
 
   sessionStorage.clear();
   sessionStorage.setItem("ipData", JSON.stringify(ipApiData));
   sessionStorage.setItem("ipModuleCalled", JSON.stringify(ipModuleCalled));
-  
-
 
   // const { loading: weatherLoading, error: weatherError, apiData: weatherApiData, moduleCalled: weatherModuleCalled } = useMockWeatherData();
 

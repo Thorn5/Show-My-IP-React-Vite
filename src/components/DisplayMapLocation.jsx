@@ -9,7 +9,7 @@ const DisplayMapLocation = () => {
   if (ipData && Object.keys(ipData).length > 0) {
     return (
       <>
-        <div id="map">
+        <div id="map" style={{ display: "flex", justifyContent: "center", alignItems: "center",}}>
           <MapContainer center={position} zoom={13} scrollWheelZoom={false} style={{ height: "70vh", width: "80vw", }}>
             <TileLayer
               attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'

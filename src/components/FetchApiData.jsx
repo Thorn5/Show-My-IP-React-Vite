@@ -14,6 +14,7 @@ export default function FetchApiData() {
   sessionStorage.clear();
   sessionStorage.setItem("ipData", JSON.stringify(ipApiData));
   sessionStorage.setItem("ipModuleCalled", JSON.stringify(ipModuleCalled));
+  
 
 
   // const { loading: weatherLoading, error: weatherError, apiData: weatherApiData, moduleCalled: weatherModuleCalled } = useMockWeatherData();

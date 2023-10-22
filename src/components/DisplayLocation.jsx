@@ -2,11 +2,11 @@
 import React from 'react';
 
 const DisplayLocation = () => {
-    const ipDataString = sessionStorage.getItem('ipData')
-    const ipData = JSON.parse(ipDataString);
-return (
+  const ipDataString = sessionStorage.getItem('ipData')
+  const ipData = JSON.parse(ipDataString);
+    return (
     <>
-    <h3>It looks like you are in or near {ipData.city}</h3>
+      <h3>It looks like you are in or near {ipData.city}</h3>
     </>
   );
 }

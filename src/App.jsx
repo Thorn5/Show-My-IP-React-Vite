@@ -9,9 +9,9 @@ import DisplayWeather from "./components/DisplayWeather";
 function App() {
   FetchApiData();
   return (<>
-    {/* <DisplayLocation /> */}
-    {/* <DisplayMapLocation /> */}
-    {/* <DisplayTime /> */}
+    <DisplayLocation />
+    <DisplayMapLocation />
+    <DisplayTime />
     {/* <DisplayWeather /> */}
   </>)
 }

@@ -8,7 +8,7 @@ const DisplayWeather = () => {
   if (weatherData && Object.keys(weatherData).length > 0) {
     return (
       <>
-        <h5>and the weather is {weatherData.currentConditions.conditions}</h5>
+        <p>and the weather is {weatherData.currentConditions.conditions}</p>
       </>
     );
   }

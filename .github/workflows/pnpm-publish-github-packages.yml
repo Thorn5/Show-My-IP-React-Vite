@@ -34,3 +34,6 @@ jobs:
       - run: pnpm publish
         env:
           NODE_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}
+          VITE_APP_IPBASEURL: ${{secrets.VITE_APP_IPBASEURL}}
+          VITE_APP_WEATHER_BASE_URL: ${{secrets.VITE_APP_WEATHER_BASE_URL}}
+          VITE_APP_WEATHER_REQUEST_PARAMS: ${{secrets.VITE_APP_WEATHER_REQUEST_PARAMS}}

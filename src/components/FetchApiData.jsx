@@ -6,8 +6,7 @@ import useMockWeatherData from "../hooks/useMockWeatherData";
 export default function FetchApiData() {
   // const { loading: ipLoading, error: ipError, apiData: ipApiData, moduleCalled: ipModuleCalled } = useMockData();
 
-  // const ipBaseUrl = import.meta.env.VITE_APP_IPBASEURL; // get .env secret (local repo)
-  const ipBaseUrl = process.env.VITE_APP_IPBASEURL; // access .env secret (GitHub Pages)
+  const ipBaseUrl = import.meta.env.VITE_APP_IPBASEURL;
   const ipRequestEndpoint = "/json/"; // true location
   // const ipRequestEndpoint = "/183.177.124.136/json/"; // mock location
   const ipUrl = `${ipBaseUrl}${ipRequestEndpoint}`;
@@ -19,11 +18,9 @@ export default function FetchApiData() {
 
   // const { loading: weatherLoading, error: weatherError, apiData: weatherApiData, moduleCalled: weatherModuleCalled } = useMockWeatherData();
 
-  // const weatherBaseUrl = import.meta.env.VITE_APP_WEATHER_BASE_URL // get .env secret (local repo)
-  const weatherBaseUrl = process.env.VITE_APP_WEATHER_BASE_URL // access .env secret (GitHub Pages)
+  const weatherBaseUrl = import.meta.env.VITE_APP_WEATHER_BASE_URL
   const WeatherRequestEndpoint = `/${ipApiData.city}/today`;
-  // const weatherRequestParams = import.meta.env.VITE_APP_WEATHER_REQUEST_PARAMS; // get .env secret (local repo)
-  const weatherRequestParams = process.env.VITE_APP_WEATHER_REQUEST_PARAMS; // access .env secret (GitHub Pages)
+  const weatherRequestParams = import.meta.env.VITE_APP_WEATHER_REQUEST_PARAMS;
   const weatherUrl = `${weatherBaseUrl}${WeatherRequestEndpoint}${weatherRequestParams}`;
   const { loading: weatherLoading, error: weatherError, apiData: weatherApiData, moduleCalled: weatherModuleCalled } = useAsyncAwait(weatherUrl);
 

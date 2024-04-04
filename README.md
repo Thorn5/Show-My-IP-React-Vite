@@ -1,7 +1,7 @@
 # What's My IP (React [Vite])
 
-Project viewable at: \
-[Project viewable at:](https://show-my-ip-react-vite.onrender.com) \
+This project is viewable at: \
+https://show-my-ip-react-vite.onrender.com/ 
 
 This project is adapted from, or inspired by: \
 https://github.com/Thorn5/React-What-s-My-IP \
